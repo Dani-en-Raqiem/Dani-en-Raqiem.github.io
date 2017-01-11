@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BMW</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <div class="">
+      <h1>BMW</h1>
+        <p>
+          <ul id="menu">
+            <li id="items"><a href="index.html">Home</a></li>
+            <li id="items"><a href="3serie.html">3 serie</a></li>
+            <li id="items"><a href="4serie.html">4 serie</a></li>
+            <li id="items"><a href="5serie.html">5 serie</a></li>
+            <li id="items"><a href="6serie.html">6 serie</a></li>
+            <li id="items"><a href="7serie.html">7 serie</a></li>
+            <li id="items"><a href="Xserie.html">X serie</a></li>
+            <li id="items"><a href="Mserie.html">M serie</a></li>
+            <li id="items"><a href="Iserie.html">I serie</a></li>
+            <li id="items"><a href="cnt.html">Contact</a></li>
+          </ul>
+        </p>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="http://www.bmw.com.au/content/dam/bmw/marketAU/bmw_com_au/topics/offers-and-services/Promotions/3-4series-promo/BMW100Year.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1472169688748.jpg" style="width:100%">
+
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="http://www.bmw.ca/content/dam/bmw/common/home/teaser/g11g12_home_large.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1461331496519.jpg" style="width:100%">
+
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="http://www.bmw-yemen.com/content/dam/bmw/common/home/teaser/g11-g12-mpa-large-teaser-bg.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1458241500593.jpg" style="width:100%">
+
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        </div>
+        <div id="main">
+          <p><h2>Over BMW</h2></p>
+          <p> </p>
+        </div>
+        <div>
+          <p align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oLv0acTmN3U" frameborder="0" allowfullscreen></iframe>
+          </p>
+        </div>
+        <div>
+          <p id="footer">Copyright &copy; 2017 Bmw dealer Nederland</p>
+        </div>
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex> slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 2000);
+          }
+
+      </script>
+  </body>
+</html>
